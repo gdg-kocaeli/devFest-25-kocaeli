@@ -48,3 +48,30 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #a8a8a8;
 }
+
+/* Custom large sizes for blur effects */
+.w-160 { width: 40rem; }
+.h-160 { height: 40rem; }
+.w-192 { width: 48rem; }
+.h-192 { height: 48rem; }
+.-top-96 { top: -24rem; }
+.-right-96 { right: -24rem; }
+.-left-96 { left: -24rem; }
+.-bottom-96 { bottom: -24rem; }
+.-left-64 { left: -16rem; }
+
+/* Mobile menu animations */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slideDown {
+  animation: slideDown 0.2s ease-out;
+}

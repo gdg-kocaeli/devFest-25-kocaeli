@@ -13,9 +13,9 @@ export default function Home() {
       <Navigation />
       <main>
         <HeroSection />
-        <SpeakersSection />
-        <ScheduleSection />
         <SponsorsSection />
+        {/* <SpeakersSection /> */}
+        {/* <ScheduleSection /> */}
         <TeamSection />
         <ContactSection />
       </main>
