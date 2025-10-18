@@ -76,7 +76,7 @@ export default function Navigation() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={componentStyles.navigation.menuItem(false)}
+                  className={`${componentStyles.navigation.menuItem(false)} cursor-pointer`}
                 > 
                   {item.label}
                 </button>
@@ -88,7 +88,7 @@ export default function Navigation() {
           <div className="md:hidden">
             <button
               onClick={toggleMobileMenu}
-              className={componentStyles.navigation.mobileButton}
+              className={`${componentStyles.navigation.mobileButton} cursor-pointer`}
               aria-expanded={isMobileMenuOpen}
             >
               <svg
@@ -125,7 +125,7 @@ export default function Navigation() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="block w-full text-left px-3 py-2.5 text-[15px] font-medium text-[#E0E2E3] hover:text-blue-400 hover:bg-blue-400/10 rounded-md transition-all duration-200 font-inter"
+                  className="block w-full text-left px-3 py-2.5 text-[15px] font-medium text-[#E0E2E3] hover:text-blue-400 hover:bg-blue-400/10 rounded-md transition-all duration-200 font-inter cursor-pointer"
                   style={{ animationDelay: `${index * 50}ms` }}
                 >
                   {item.label}

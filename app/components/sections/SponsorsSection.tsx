@@ -13,7 +13,7 @@ export default function SponsorsSection() {
     <div className="sponsors-section my-16" id="sponsors">      
       <div style={{ maxWidth: '400px', margin: '20px auto' }}>
         <Button 
-          className="!bg-[#25773b] !text-[#f5f6f6] !w-full !rounded-2xl gap-2"
+          className="!bg-[#25773b] !text-[#f5f6f6] !w-full !rounded-2xl gap-2 hover:!bg-[#1e5f2f]"
           onClick={handleSponsorClick}
         >
           <Image src="/handshake.svg" alt="" width={24} height={24} />

@@ -11,7 +11,8 @@ export default function Button({ children, className, ...props }: ButtonProps) {
         w-60 relative rounded-lg bg-[#4285f4] h-12
         flex items-center justify-center px-4 py-3 box-border 
         text-left text-base text-white font-inter font-medium
-        hover:bg-[#3367d6] transition-colors
+        hover:bg-[#3367d6] hover:scale-[1.02] 
+        active:scale-[0.98] transition-all duration-200 ease-in-out cursor-pointer
         ${className || ''}
       `}
       {...props}
