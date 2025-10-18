@@ -28,10 +28,39 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "DevFest Kocaeli 2025 - Teknoloji, İnovasyon ve Topluluk",
   description: "Google Developer Groups tarafından düzenlenen Kocaeli'nin en büyük teknoloji etkinliği. Modern teknolojiler, uzman konuşmacılar ve networking fırsatları.",
+  keywords: ["DevFest", "Kocaeli", "GDG", "Google Developer Groups", "Teknoloji", "Yazılım", "Konferans", "2025"],
+  authors: [{ name: "GDG Kocaeli" }],
+  creator: "GDG Kocaeli",
+  publisher: "GDG Kocaeli",
+  metadataBase: new URL('https://devfest-kocaeli.com'),
+  openGraph: {
+    title: "DevFest Kocaeli 2025",
+    description: "Google Developer Groups tarafından düzenlenen Kocaeli'nin en büyük teknoloji etkinliği",
+    url: "https://devfest-kocaeli.com",
+    siteName: "DevFest Kocaeli 2025",
+    locale: "tr_TR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "DevFest Kocaeli 2025",
+    description: "Google Developer Groups tarafından düzenlenen Kocaeli'nin en büyük teknoloji etkinliği",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
   icons: {
-    icon: '/logo.svg',
-    shortcut: '/logo.svg',
-    apple: '/logo.svg',
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/favicon.ico', sizes: 'any' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
   },
 };
 
