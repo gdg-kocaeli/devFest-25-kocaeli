@@ -28,6 +28,11 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "DevFest Kocaeli 2025 - Teknoloji, İnovasyon ve Topluluk",
   description: "Google Developer Groups tarafından düzenlenen Kocaeli'nin en büyük teknoloji etkinliği. Modern teknolojiler, uzman konuşmacılar ve networking fırsatları.",
+  icons: {
+    icon: '/logo.svg',
+    shortcut: '/logo.svg',
+    apple: '/logo.svg',
+  },
 };
 
 export default function RootLayout({
