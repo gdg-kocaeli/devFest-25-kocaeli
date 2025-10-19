@@ -6,7 +6,7 @@ import { componentStyles } from '../../styles/style-utils';
 
 const navigationItems = [
   { id: 'sponsors', label: 'Sponsorlar' },
-  // { id: 'speakers', label: 'Konuşmacılar' },
+  { id: 'speakers', label: 'Konuşmacılar' },
   // { id: 'schedule', label: 'Program' },
   { id: 'team', label: 'Ekip' },
   { id: 'iletisim', label: 'İletişim' }

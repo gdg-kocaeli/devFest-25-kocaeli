@@ -42,6 +42,7 @@ export default function TeamSection() {
               linkedin={member.linkedin}
               twitter={member.twitter}
               image={member.image}
+              size='large'
             />
           ))}
         </div>

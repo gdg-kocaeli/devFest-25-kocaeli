@@ -8,6 +8,7 @@ interface ProfileCardProps {
   linkedin?: string;
   twitter?: string;
   image?: string;
+  size?: 'small' | 'large';
 }
 
 const ProfileCard: FunctionComponent<ProfileCardProps> = ({
@@ -16,12 +17,31 @@ const ProfileCard: FunctionComponent<ProfileCardProps> = ({
   title,
   linkedin,
   twitter,
-  image
+  image,
+  size = 'large'
 }) => {
+  const isSmall = size === 'small';
+
+  
+  const shadowClass = isSmall 
+    ? 'shadow-[0px_1px_8px_#f442e2]' 
+    : 'shadow-[0px_2px_16px_#f442e2]';
+
   return (
-    <div className="w-80 relative shadow-[0px_2px_16px_#f442e2] rounded-[32px] bg-[rgba(51,51,51,0.5)] border-[0.5px] border-[#f442e2] h-[320px] flex flex-col items-center justify-center px-4 gap-4 text-center text-xl text-[#f5f6f6] font-['Inter']">
+    <div className={`
+      relative rounded-[32px] 
+      bg-[rgba(51,51,51,0.5)] border-[0.5px] border-[#f442e2] 
+      flex flex-col items-center justify-center text-center 
+      text-[#f5f6f6] font-['Inter']
+      ${isSmall ? 'w-full h-full p-3 gap-2' : 'w-[250px] h-[320px] p-4 gap-4'}
+      ${shadowClass} {/* Dinamik gölge class'ını buraya ekliyoruz */}
+    `}>
+      
       {image && (
-        <div className="w-[150px] h-[150px] rounded-full overflow-hidden">
+        <div className={`
+          ${isSmall ? 'w-24 h-24' : 'w-[150px] h-[150px]'} 
+          rounded-full overflow-hidden
+        `}>
           <Image
             src={image}
             alt={`${name} ${surname}`}
@@ -32,44 +52,23 @@ const ProfileCard: FunctionComponent<ProfileCardProps> = ({
         </div>
       )}
       
-      <div className="font-medium">
+      <div className={`font-medium ${isSmall ? 'text-base' : 'text-xl'}`}>
         {name} {surname}
       </div>
       
-      <div className="text-base text-[#bbbfc3]">
+      <div className={`text-[#bbbfc3] ${isSmall ? 'text-sm' : 'text-base'}`}>
         {title}
       </div>
       
       <div className="flex gap-3">
         {linkedin && (
-          <a
-            href={linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:opacity-80 transition-opacity"
-          >
-            <Image
-              src="/linkedin.svg"
-              alt="LinkedIn"
-              width={36}
-              height={36}
-            />
+          <a href={linkedin} target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+            <Image src="/linkedin.svg" alt="LinkedIn" width={isSmall ? 32 : 36} height={isSmall ? 32 : 36} />
           </a>
         )}
-        
         {twitter && (
-          <a
-            href={twitter}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:opacity-80 transition-opacity"
-          >
-            <Image
-              src="/twitter.svg"
-              alt="Twitter"
-              width={36}
-              height={36}
-            />
+          <a href={twitter} target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+            <Image src="/twitter.svg" alt="Twitter" width={isSmall ? 32 : 36} height={isSmall ? 32 : 36} />
           </a>
         )}
       </div>
