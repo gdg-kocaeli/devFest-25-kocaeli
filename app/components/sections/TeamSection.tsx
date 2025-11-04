@@ -11,13 +11,6 @@ export default function TeamSection() {
       image: "/organizer-mha.png"
     },
     {
-      name: "Efe Alp",
-      surname: "Tuncel",
-      title: "Organizer",
-      linkedin: "https://www.linkedin.com/in/efealptuncel/",
-      image: "/organizer-eat.jpeg"
-    },
-    {
       name: "Ecem",
       surname: "Yalçın",
       title: "Organizer",
