@@ -12,10 +12,16 @@ export default function SpeakersSection() {
       image: '/organizer-mha.png',
     },
     {
-      name: 'Efe Alp',
-      surname: 'Tuncel',
+      name: 'Ecem',
+      surname: 'Yalçın',
       title: 'Organizer',
-      image: '/organizer-eat.jpeg',
+      image: '/organizer-ey.jpeg',
+    },
+    {
+      name: 'M. Halil',
+      surname: 'Akkaynak',
+      title: 'Organizer',
+      image: '/organizer-mha.png',
     },
     {
       name: 'Ecem',
@@ -30,10 +36,16 @@ export default function SpeakersSection() {
       image: '/organizer-mha.png',
     },
     {
-      name: 'Efe Alp',
-      surname: 'Tuncel',
+      name: 'Ecem',
+      surname: 'Yalçın',
       title: 'Organizer',
-      image: '/organizer-eat.jpeg',
+      image: '/organizer-ey.jpeg',
+    },
+    {
+      name: 'M. Halil',
+      surname: 'Akkaynak',
+      title: 'Organizer',
+      image: '/organizer-mha.png',
     },
     {
       name: 'Ecem',
@@ -48,12 +60,6 @@ export default function SpeakersSection() {
       image: '/organizer-mha.png',
     },
     {
-      name: 'Efe Alp',
-      surname: 'Tuncel',
-      title: 'Organizer',
-      image: '/organizer-eat.jpeg',
-    },
-    {
       name: 'Ecem',
       surname: 'Yalçın',
       title: 'Organizer',
@@ -66,11 +72,12 @@ export default function SpeakersSection() {
       image: '/organizer-mha.png',
     },
     {
-      name: 'Efe Alp',
-      surname: 'Tuncel',
+      name: 'Ecem',
+      surname: 'Yalçın',
       title: 'Organizer',
-      image: '/organizer-eat.jpeg',
+      image: '/organizer-ey.jpeg',
     },
+    
   ];
 
   const [isMobile, setIsMobile] = useState(false);
