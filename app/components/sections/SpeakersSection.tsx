@@ -1,25 +1,115 @@
 'use client';
-
-import Button from '../ui/Button';
+import ProfileCard from '../ui/ProfileCard';
 import Image from 'next/image';
-
+import { useState, useEffect } from 'react';
 export default function SpeakersSection() {
-  
-  const handleSpeakerClick = () => {
-    window.location.href = '#';
-  }
+  const speakers = [
+
+    {
+      name: 'M. Halil',
+      surname: 'Akkaynak',
+      title: 'Organizer',
+      image: '/organizer-mha.png',
+    },
+    {
+      name: 'Ecem',
+      surname: 'Yalçın',
+      title: 'Organizer',
+      image: '/organizer-ey.jpeg',
+    },
+    {
+      name: 'M. Halil',
+      surname: 'Akkaynak',
+      title: 'Organizer',
+      image: '/organizer-mha.png',
+    },
+    {
+      name: 'Ecem',
+      surname: 'Yalçın',
+      title: 'Organizer',
+      image: '/organizer-ey.jpeg',
+    },
+    {
+      name: 'M. Halil',
+      surname: 'Akkaynak',
+      title: 'Organizer',
+      image: '/organizer-mha.png',
+    },
+    {
+      name: 'Ecem',
+      surname: 'Yalçın',
+      title: 'Organizer',
+      image: '/organizer-ey.jpeg',
+    },
+    {
+      name: 'M. Halil',
+      surname: 'Akkaynak',
+      title: 'Organizer',
+      image: '/organizer-mha.png',
+    },
+    {
+      name: 'Ecem',
+      surname: 'Yalçın',
+      title: 'Organizer',
+      image: '/organizer-ey.jpeg',
+    },
+    {
+      name: 'M. Halil',
+      surname: 'Akkaynak',
+      title: 'Organizer',
+      image: '/organizer-mha.png',
+    },
+    {
+      name: 'Ecem',
+      surname: 'Yalçın',
+      title: 'Organizer',
+      image: '/organizer-ey.jpeg',
+    },
+    {
+      name: 'M. Halil',
+      surname: 'Akkaynak',
+      title: 'Organizer',
+      image: '/organizer-mha.png',
+    },
+    {
+      name: 'Ecem',
+      surname: 'Yalçın',
+      title: 'Organizer',
+      image: '/organizer-ey.jpeg',
+    },
+    
+  ];
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
-    <div className="speakers-section my-32" id="speakers">      
-      <div style={{ maxWidth: '400px', margin: '20px auto' }}>
-        <Button 
-          className="!bg-[#E4AB04] !text-white !w-full !rounded-2xl gap-2 hover:!bg-[#cc9903]"
-          onClick={handleSpeakerClick}
-        >
-          <Image src="/mic.svg" alt="" width={24} height={24} />
-          Konuşmacı Olmak İster misiniz?
-        </Button>
+    <section id="speakers" className="py-2">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-4xl font-bold text-center mb-12 text-white">
+          🎙️ Konuşmacılar
+        </h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-x-[38px] md:gap-y-[32px] max-w-[1114px] mx-auto mb-8">
+          {speakers.map((member, index) => (
+            <ProfileCard
+              key={index}
+              name={member.name}
+              surname={member.surname}
+              title={member.title}
+              image={member.image}
+              size={isMobile ? 'small' : 'large'} 
+            />
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
