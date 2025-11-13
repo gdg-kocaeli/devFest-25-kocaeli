@@ -55,11 +55,6 @@ export default function SponsorCard({
                     aria-hidden="true"
                     style={{ display: "block" }}
                 >
-                    <rect width="100" height="100" rx="8" fill="rgba(255, 255, 255, 0.05)" />
-                    <g transform="translate(10,10)" fill="none" stroke="rgba(255, 255, 255, 0.2)" strokeWidth="4">
-                        <rect x="0" y="0" width="80" height="50" rx="4" />
-                        <path d="M0 60 L30 30 L50 50 L80 20 L80 60 Z" strokeLinecap="round" strokeLinejoin="round" />
-                    </g>
                 </svg>
             )}
 
