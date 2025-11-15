@@ -48,7 +48,7 @@ const ProfileCard: FunctionComponent<ProfileCardProps> = ({
             width={150}
             height={150}
             className="w-full h-full object-cover"
-            
+            loading="lazy"
           />
         </div>
       )}

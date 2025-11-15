@@ -66,7 +66,7 @@ export default function ScheduleCard({
         {/* Sol taraf */}
         <div className="flex flex-col gap-2 flex-1 justify-center">
           {/* Saat */}
-          <div className="text-[#bbbfc3] text-sm font-medium">
+          <div className="text-[#bbbfc3] text-sm font-medium mt-4 md:mt-0">
             {time}
           </div>
 
@@ -92,6 +92,7 @@ export default function ScheduleCard({
               width={100}
               height={100}
               className="w-full h-full object-cover"
+              loading="lazy"
             />
           </div>
         )}
