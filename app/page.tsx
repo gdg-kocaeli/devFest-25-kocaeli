@@ -15,7 +15,7 @@ export default function Home() {
         <HeroSection />
         <SponsorsSection />
         <SpeakersSection /> 
-        {/* <ScheduleSection /> */}
+        <ScheduleSection/> 
         <TeamSection />
         <ContactSection />
       </main>
