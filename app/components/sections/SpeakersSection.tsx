@@ -1,10 +1,9 @@
 'use client';
 import ProfileCard from '../ui/ProfileCard';
-import Image from 'next/image';
 import { useState, useEffect } from 'react';
+
 export default function SpeakersSection() {
   const speakers = [
-
     {
       name: 'M. Halil',
       surname: 'Akkaynak',
@@ -77,7 +76,6 @@ export default function SpeakersSection() {
       title: 'Organizer',
       image: '/organizer-ey.jpeg',
     },
-    
   ];
 
   const [isMobile, setIsMobile] = useState(false);
@@ -97,7 +95,7 @@ export default function SpeakersSection() {
         <h2 className="text-4xl font-bold text-center mb-12 text-white">
           🎙️ Konuşmacılar
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-x-[38px] md:gap-y-[32px] max-w-[1114px] mx-auto mb-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-x-[38px] md:gap-y-[32px] max-w-[1115px] mx-auto justify-items-center">
           {speakers.map((member, index) => (
             <ProfileCard
               key={index}
