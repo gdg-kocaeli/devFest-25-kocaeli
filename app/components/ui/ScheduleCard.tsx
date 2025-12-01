@@ -6,7 +6,7 @@ type ScheduleCardProps = {
   time: string;
   title: string;
   speaker?: string;
-  speakerImage?: string;
+  speakerImage?: string | string[];
   isMola?: boolean;
 };
 
@@ -49,7 +49,7 @@ export default function ScheduleCard({
   const style = typeStyles[type];
 
   return (
-    <div className="relative w-full max-w-[600px] mx-auto rounded-2xl border border-white bg-[#2a2a2a] p-4 h-[132px]">
+    <div className="relative w-full max-w-[600px] mx-auto rounded-2xl border border-white bg-[#2a2a2a] p-4">
       {/* Type Badge - Mobilde içeride, desktopda dışarıda */}
       <div
         className="absolute -top-2 left-2 md:left-[-37px] px-3 py-1 rounded-lg text-xs font-bold whitespace-nowrap"
@@ -62,11 +62,11 @@ export default function ScheduleCard({
       </div>
 
       {/* İçerik */}
-      <div className="flex items-center justify-between h-full">
+      <div className="flex items-start justify-between mt-4">
         {/* Sol taraf */}
-        <div className="flex flex-col gap-2 flex-1 justify-center">
+        <div className="flex flex-col gap-2 flex-1">
           {/* Saat */}
-          <div className="text-[#bbbfc3] text-sm font-medium mt-4 md:mt-0">
+          <div className="text-[#bbbfc3] text-sm font-medium">
             {time}
           </div>
 
@@ -85,15 +85,34 @@ export default function ScheduleCard({
 
         {/* Sağ taraf - Fotoğraf */}
         {speakerImage && !isMola && (
-          <div className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] rounded-full overflow-hidden flex-shrink-0 ml-4">
-            <Image
-              src={speakerImage}
-              alt={speaker || ''}
-              width={100}
-              height={100}
-              className="w-full h-full object-cover"
-              loading="lazy"
-            />
+          <div className="flex items-center justify-center">
+            {Array.isArray(speakerImage) ? (
+              <div className="flex -space-x-4">
+                {speakerImage.map((src, index) => (
+                  <div key={index} className="w-[60px] h-[60px] md:w-[80px] md:h-[80px] rounded-full overflow-hidden">
+                    <Image
+                      src={src}
+                      alt={speaker || `speaker ${index + 1}`}
+                      width={80}
+                      height={80}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] rounded-full overflow-hidden flex-shrink-0 ml-4">
+                <Image
+                  src={speakerImage as string}
+                  alt={speaker || ''}
+                  width={100}
+                  height={100}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+            )}
           </div>
         )}
       </div>
