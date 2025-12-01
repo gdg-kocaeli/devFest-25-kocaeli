@@ -5,6 +5,7 @@ interface ProfileCardProps {
   name: string;
   surname: string;
   title: string;
+  company?: string;
   linkedin?: string;
   twitter?: string;
   image?: string;
@@ -15,6 +16,7 @@ const ProfileCard: FunctionComponent<ProfileCardProps> = ({
   name,
   surname,
   title,
+  company,
   linkedin,
   twitter,
   image,
@@ -31,17 +33,21 @@ const ProfileCard: FunctionComponent<ProfileCardProps> = ({
     <div className={`
       relative rounded-[32px] 
       bg-[rgba(51,51,51,0.5)] border-[0.5px] border-[#f442e2] 
-      flex flex-col items-center justify-center text-center 
+      flex flex-col items-center justify-between text-center 
       text-[#f5f6f6] font-['Inter']
-      ${isSmall ? 'w-full h-full p-3 gap-2' : 'w-[250px] h-[320px] p-4 gap-4'}
+      ${isSmall ? 'w-full h-full p-3' : 'w-[250px] h-[320px] p-4'}
       ${shadowClass} {/* Dinamik gölge class'ını buraya ekliyoruz */}
     `}>
       
+      <div className="flex flex-col items-center text-center gap-2">
       {image && (
-        <div className={`
-          ${isSmall ? 'w-24 h-24' : 'w-[150px] h-[150px]'} 
-          rounded-full overflow-hidden
-        `}>
+        <div 
+          className={`
+            ${isSmall ? 'w-24 h-24' : 'w-[150px] h-[150px]'} 
+            rounded-full overflow-hidden
+          `}
+          style={{ transform: 'translateZ(0)' }}
+        >
           <Image
             src={image}
             alt={`${name} ${surname}`}
@@ -57,10 +63,19 @@ const ProfileCard: FunctionComponent<ProfileCardProps> = ({
         {name} {surname}
       </div>
       
-      <div className={`text-[#bbbfc3] ${isSmall ? 'text-sm' : 'text-base'}`}>
-        {title}
+      <div className="flex flex-col gap-1">
+        <div className={`text-[#bbbfc3] ${isSmall ? 'text-sm' : 'text-base'}`}>
+          {title}
+        </div>
+        {company && (
+          <div className={`text-[#bbbfc3] ${isSmall ? 'text-xs' : 'text-sm'}`}>
+            {company}
+          </div>
+        )}
       </div>
       
+      </div>
+
       <div className="flex gap-3">
         {linkedin && (
           <a href={linkedin} target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">

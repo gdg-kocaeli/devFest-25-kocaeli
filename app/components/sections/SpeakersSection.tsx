@@ -5,77 +5,117 @@ import { useState, useEffect } from 'react';
 export default function SpeakersSection() {
   const speakers = [
     {
-      name: 'M. Halil',
-      surname: 'Akkaynak',
-      title: 'Organizer',
-      image: '/organizer-mha.png',
+      name: 'Ramesh',
+      surname: 'Chander',
+      title: 'Head of Developer Relations, MENA-T',
+      company: '@Google',
+      image:  '/ramesh-chander.jpeg', 
     },
     {
-      name: 'Ecem',
-      surname: 'Yalçın',
-      title: 'Organizer',
-      image: '/organizer-ey.jpeg',
+      name : 'Abdel ',
+      surname : 'Sghiouar',
+      title : 'Senior Cloud Developer Advocate',
+      company : '@Google',
+      image : '/abdel-sghiouar.png'
     },
     {
-      name: 'M. Halil',
-      surname: 'Akkaynak',
-      title: 'Organizer',
-      image: '/organizer-mha.png',
+      name : 'Ersin',
+      surname : 'Yetisen',
+      title : 'Head Of Software Development',
+      company : '@Kartaca',
+      image : '/ersin-yetisen.png'
+    },
+
+    {
+      name : 'Levent',
+      surname : ' Kantaroglu',
+      title : 'Mobile Team Lead',
+      company : '@THY Teknoloji',
+      image : '/levent-kantaroglu.png',
     },
     {
-      name: 'Ecem',
-      surname: 'Yalçın',
-      title: 'Organizer',
-      image: '/organizer-ey.jpeg',
+      name : 'Bengisu',
+      surname : 'Özkul',
+      title : 'Flutter Developer',
+      company : '@THY Teknoloji',
+      image : '/bengisu.jpg',
     },
     {
-      name: 'M. Halil',
-      surname: 'Akkaynak',
-      title: 'Organizer',
-      image: '/organizer-mha.png',
+      name : 'Alper',
+      surname : 'Sarı',
+      title : 'Cloud Native Engineer',
+      company : '@bestcloudfor.me',
+      image : '/alper-sari.jpeg',
     },
     {
-      name: 'Ecem',
-      surname: 'Yalçın',
-      title: 'Organizer',
-      image: '/organizer-ey.jpeg',
+      name : 'Esra',
+      surname : 'Kadah',
+      title : 'Senior App Developer',
+      company : '@Antigua Mobile',
+      image : '/esra-kadah.jpg',
     },
     {
-      name: 'M. Halil',
-      surname: 'Akkaynak',
-      title: 'Organizer',
-      image: '/organizer-mha.png',
+      name : 'Kaan Enes',
+      surname : 'Kapıcı',
+      title : 'Senior Mobile Application Engineer Specialist ',
+      company : '@İnnova Bilişim',
+      image : '/kaan-enes-kapici.jpg',
     },
     {
-      name: 'Ecem',
-      surname: 'Yalçın',
-      title: 'Organizer',
-      image: '/organizer-ey.jpeg',
+      name : 'Mert',
+      surname : 'Polat',
+      title : 'SRE/Chaos Engineer',
+      company : '@Intertech',
+      image : '/mert-polat.jpg'
+    },
+
+
+
+
+    {
+      name : 'Emin',
+      surname : ' Çimen',
+      title : 'Platform Engineer',
+      company : '@Trendyol',
+      image : '/emin-cimen.jpg'
     },
     {
-      name: 'M. Halil',
-      surname: 'Akkaynak',
-      title: 'Organizer',
-      image: '/organizer-mha.png',
+      name : 'Ali Can',
+      surname : 'Gündüz',
+      title : 'Jr. Cloud Platform Specialist',
+      company : '@Bulutistan',
+      image : '/ali-can-gunduz.jpg',
     },
     {
-      name: 'Ecem',
-      surname: 'Yalçın',
-      title: 'Organizer',
-      image: '/organizer-ey.jpeg',
+      name : 'Esra',
+      surname : 'Doğan',
+      title : 'İş Analisti ve Uygulama Uzmanı',
+      company : '@AKCEZ',
+      image : '/esra-dogan.png',
     },
     {
-      name: 'M. Halil',
-      surname: 'Akkaynak',
-      title: 'Organizer',
-      image: '/organizer-mha.png',
+      name : 'Melih',
+      surname : 'Kuru',
+      title : 'Software Developer',
+      company : '@Kartaca',
+      image : '/melih-kuru.png',
     },
     {
-      name: 'Ecem',
-      surname: 'Yalçın',
-      title: 'Organizer',
-      image: '/organizer-ey.jpeg',
+      name : 'Fahri',
+      surname : 'Gedik',
+      title : 'Software Developer',
+      company : '@Volosoft',
+      image : '/fahri-gedik.jpg',
     },
+    {
+      name : 'Abdulkerim',
+      surname : 'Karaman',
+      title : 'Mobile App Development Manager',
+      company : '@AlbarakaTech Global',
+      image : '/abdulkerim-karaman.jpg',
+    },
+    
+    
   ];
 
   const [isMobile, setIsMobile] = useState(false);
@@ -90,7 +130,7 @@ export default function SpeakersSection() {
   }, []);
 
   return (
-    <section id="speakers" className="py-2">
+    <section id="speakers" className="py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-bold text-center mb-12 text-white">
           🎙️ Konuşmacılar
@@ -102,6 +142,7 @@ export default function SpeakersSection() {
               name={member.name}
               surname={member.surname}
               title={member.title}
+              company={member.company}
               image={member.image}
               size={isMobile ? 'small' : 'large'} 
             />
