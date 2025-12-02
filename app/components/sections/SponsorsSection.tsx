@@ -2,6 +2,7 @@
 
 import Button from '../ui/Button';
 import Image from 'next/image';
+import Link from 'next/link';
 import SponsorCard from '../ui/SponsorCard';
 import { useState, useEffect } from 'react';
 
@@ -11,29 +12,28 @@ export default function SponsorsSection() {
   };
 
   const goldSponsors = [
-    { label: "Sponsor 1", src: "/google-developers-logo-png_seeklogo-394547.webp", alt: "Sponsor 1" },
-    { label: "Sponsor 2", src: "/google-developers-logo-png_seeklogo-394547.webp", alt: "Sponsor 2" },
-    { label: "Sponsor 3", src: "/google-developers-logo-png_seeklogo-394547.webp", alt: "Sponsor 3" },
-    { label: "Sponsor 4", src: "/google-developers-logo-png_seeklogo-394547.webp", alt: "Sponsor 4" },
-    { label: "Sponsor 5", src: "/google-developers-logo-png_seeklogo-394547.webp", alt: "Sponsor 5" },
-    { label: "Sponsor 6", src: "/google-developers-logo-png_seeklogo-394547.webp", alt: "Sponsor 6" },
-    { label: "Sponsor 7", src: "/google-developers-logo-png_seeklogo-394547.webp", alt: "Sponsor 7" },
-    { label: "Sponsor 8", src: "/google-developers-logo-png_seeklogo-394547.webp", alt: "Sponsor 8" },
+    { label: "Kartaca", src: "/kartaca.jpg", alt: "Gold Sponsor Kartaca", href: "https://kartaca.com/", customSize: 189 }
   ];
 
   const silverSponsors = [
-    { label: "Silver Sponsor 1", src: "/google-developers-logo-png_seeklogo-394547.webp", alt: "Silver Sponsor 1" },
-    { label: "Silver Sponsor 2", src: "/google-developers-logo-png_seeklogo-394547.webp", alt: "Silver Sponsor 2" },
-    { label: "Silver Sponsor 3", src: "/google-developers-logo-png_seeklogo-394547.webp", alt: "Silver Sponsor 3" },
-    { label: "Silver Sponsor 4", src: "/google-developers-logo-png_seeklogo-394547.webp", alt: "Silver Sponsor 4" },
-    { label: "Silver Sponsor 5", src: "/google-developers-logo-png_seeklogo-394547.webp", alt: "Silver Sponsor 5" },
-    { label: "Silver Sponsor 6", src: "/google-developers-logo-png_seeklogo-394547.webp", alt: "Silver Sponsor 6" },
-    { label: "Silver Sponsor 7", src: "/google-developers-logo-png_seeklogo-394547.webp", alt: "Silver Sponsor 7" },
-    { label: "Silver Sponsor 8", src: "/google-developers-logo-png_seeklogo-394547.webp", alt: "Silver Sponsor 8" },
-    { label: "Silver Sponsor 9", src: "/google-developers-logo-png_seeklogo-394547.webp", alt: "Silver Sponsor 9" },
-    { label: "Silver Sponsor 10", src: "/google-developers-logo-png_seeklogo-394547.webp", alt: "Silver Sponsor 10" },
-    { label: "Silver Sponsor 11", src: "/google-developers-logo-png_seeklogo-394547.webp", alt: "Silver Sponsor 11" },
-    { label: "Silver Sponsor 12", src: "/google-developers-logo-png_seeklogo-394547.webp", alt: "Silver Sponsor 12" },
+    { label: "42 Türkiye", src: "/42_türkiye_beyaz.png", alt: "Silver Sponsor 42", href: "https://bilisimvadisi.com.tr/markalar/42-turkiye/" },
+  ];
+
+  const bronzSponsors = [
+    { label: "Kou Teknopark", src: "/kou.png", alt: "Bronz Sponsor Kou Tekno", href: "https://kouteknopark.com/" },
+    { label: "American Life", src: "/american.jpg", alt: "Bronz Sponsor American Life", href: "https://www.americanlife.com.tr/ingilizce-kursu/" },
+  ];
+
+  const medyaSponsors = [
+    { label: "Çetkin Agency", src: "/cetkin-agency.png", alt: "Medya Sponsoru Çetkin Agency", href: "https://www.linkedin.com/company/cetkin-agency/" },
+  ];
+
+  const etkinlikSponsors = [
+    { label: "MyWigis", src: "/mywigi.jpeg", alt: "3D Yazıcı Sponsoru MyWigis", href: "https://www.instagram.com/mywigis/" },
+    { label: "Miles Coffee", src: "/miles.png", alt: "Kahve Sponsoru Miles Coffee", href: "https://milescoffee.co/" },
+    { label: "Miuul", src: "/miuul.png", alt: "Miuul", href: "https://miuul.com/" },
+    { label: "Wish and Light", src: "/wishlight.jpg", alt: "Mum Sponsoru Wish and Light", href: "https://www.instagram.com/wish_and_light/" },
+
   ];
 
   const [isMobile, setIsMobile] = useState(false);
@@ -67,15 +67,17 @@ export default function SponsorsSection() {
             💎 Ana Sponsor
           </h3>
           <div className="flex justify-center">
-            <Image
-              src="/google-developers.svg"
-              alt="Google Developers"
-              width={364}
-              height={64}
-              className="max-w-full h-auto"
-              loading='lazy'
-              priority={false}
-            />
+            <Link href="https://developers.google.com/" target="_blank" rel="noopener noreferrer">
+              <Image
+                src="/googlefordevelopers.svg"
+                alt="GoogleDevelopers"
+                width={364}
+                height={64}
+                className="max-w-full h-auto"
+                loading='lazy'
+                priority={false}
+              />
+            </Link>
           </div>
         </div>
 
@@ -84,25 +86,27 @@ export default function SponsorsSection() {
           <h3 className="text-white text-3xl md:text-4xl font-semibold leading-none tracking-[-0.04em] text-center mb-12">
             🥇 Altın Sponsorlar
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-x-[38px] md:gap-y-8">
+          <div className="flex flex-wrap justify-center gap-4 md:gap-x-[38px] md:gap-y-8">
             {goldSponsors.map((sponsor, index) => (
-              <SponsorCard
-                key={index}
-                label={sponsor.label}
-                src={sponsor.src}
-                alt={sponsor.alt}
-                size={isMobile ? 'small' : 'large'}
-              />
+              <Link key={index} href={sponsor.href} target="_blank" rel="noopener noreferrer">
+                <SponsorCard
+                  label={sponsor.label}
+                  src={sponsor.src}
+                  alt={sponsor.alt}
+                  size={isMobile ? 'small' : 'large'}
+                  customSize={sponsor.customSize}
+                />
+              </Link>
             ))}
           </div>
         </div>
 
         {/* Gümüş Sponsorlar */}
-        <div>
+        <div className="mb-20">
           <h3 className="text-white text-3xl md:text-4xl font-semibold leading-none tracking-[-0.04em] text-center mb-12">
             🥈 Gümüş Sponsorlar
           </h3>
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-4 md:gap-x-[38px] md:gap-y-8">
+          <div className="flex flex-wrap justify-center gap-4 md:gap-x-[38px] md:gap-y-8">
             {silverSponsors.map((sponsor, index) => (
               <SponsorCard
                 key={index}
@@ -110,6 +114,64 @@ export default function SponsorsSection() {
                 src={sponsor.src}
                 alt={sponsor.alt}
                 size={isMobile ? 'small' : 'large'}
+                href={sponsor.href}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Bronz Sponsorlar */}
+        <div className="mb-20">
+          <h3 className="text-white text-3xl md:text-4xl font-semibold leading-none tracking-[-0.04em] text-center mb-12">
+            🥉 Bronz Sponsorlar
+          </h3>
+          <div className="flex flex-wrap justify-center gap-4 md:gap-x-[38px] md:gap-y-8">
+            {bronzSponsors.map((sponsor, index) => (
+              <SponsorCard
+                key={index}
+                label={sponsor.label}
+                src={sponsor.src}
+                alt={sponsor.alt}
+                size={isMobile ? 'small' : 'large'}
+                href={sponsor.href}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Medya Sponsoru */}
+        <div className="mb-20">
+          <h3 className="text-white text-3xl md:text-4xl font-semibold leading-none tracking-[-0.04em] text-center mb-12">
+            📰 Medya Sponsoru
+          </h3>
+          <div className="flex flex-wrap justify-center gap-4 md:gap-x-[38px] md:gap-y-8">
+            {medyaSponsors.map((sponsor, index) => (
+              <SponsorCard
+                key={index}
+                label={sponsor.label}
+                src={sponsor.src}
+                alt={sponsor.alt}
+                size={isMobile ? 'small' : 'large'}
+                href={sponsor.href}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Etkinlik Sponsorları */}
+        <div>
+          <h3 className="text-white text-3xl md:text-4xl font-semibold leading-none tracking-[-0.04em] text-center mb-12">
+            🎉 Etkinlik Sponsorları
+          </h3>
+          <div className="flex flex-wrap justify-center gap-4 md:gap-x-[38px] md:gap-y-8">
+            {etkinlikSponsors.map((sponsor, index) => (
+              <SponsorCard
+                key={index}
+                label={sponsor.label}
+                src={sponsor.src}
+                alt={sponsor.alt}
+                size={isMobile ? 'small' : 'large'}
+                href={sponsor.href}
               />
             ))}
           </div>
