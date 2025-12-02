@@ -1,26 +1,31 @@
 import React from "react";
 import Image from 'next/image';
+import Link from 'next/link';
 
 type SponsorCardProps = {
     label?: string;
     src?: string;
     alt?: string;
     size?: 'small' | 'large';
+    href?: string;
+    customSize?: number;
 };
 
 export default function SponsorCard({
     label = "Sponsor",
     src,
     alt,
-    size = 'large'
+    size = 'large',
+    href,
+    customSize
 }: SponsorCardProps) {
     const isSmall = size === 'small';
 
-    return (
+    const cardContent = (
         <div
             style={{
-                width: '100%',
-                aspectRatio: '1/1',
+                width: customSize ? `${customSize}px` : '140px',
+                height: customSize ? `${customSize}px` : '140px',
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
@@ -73,4 +78,14 @@ export default function SponsorCard({
             </span>
         </div>
     );
+
+    if (href) {
+        return (
+            <Link href={href} target="_blank" rel="noopener noreferrer">
+                {cardContent}
+            </Link>
+        );
+    }
+
+    return cardContent;
 }
