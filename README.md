@@ -146,6 +146,13 @@ This project is open source and available under the [MIT License](LICENSE).
 - All speakers, sponsors, and volunteers who make DevFest Kocaeli possible
 - The amazing developer community of Kocaeli
 
+### 💻 Contributors
+
+Special thanks to our contributors:
+
+- [Ahmet Vatansever](https://github.com/Ahmet-Vt)
+- [Muhammed Halil Akkaynak](https://github.com/mhakkaynak)
+
 ---
 
 <p align="center">
