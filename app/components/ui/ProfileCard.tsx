@@ -36,7 +36,7 @@ const ProfileCard: FunctionComponent<ProfileCardProps> = ({
       flex flex-col items-center justify-between text-center 
       text-[#f5f6f6] font-['Inter']
       ${isSmall ? 'w-full h-full p-3' : 'w-[250px] h-[320px] p-4'}
-      ${shadowClass} {/* Dinamik gölge class'ını buraya ekliyoruz */}
+      ${shadowClass}
     `}>
       
       <div className="flex flex-col items-center text-center gap-2">

@@ -9,6 +9,7 @@ type SponsorCardProps = {
     size?: 'small' | 'large';
     href?: string;
     customSize?: number;
+    backgroundColor?: string;
 };
 
 export default function SponsorCard({
@@ -17,7 +18,8 @@ export default function SponsorCard({
     alt,
     size = 'large',
     href,
-    customSize
+    customSize,
+    backgroundColor
 }: SponsorCardProps) {
     const isSmall = size === 'small';
 
@@ -29,7 +31,7 @@ export default function SponsorCard({
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                background: "rgba(255, 255, 255, 0.05)",
+                background: backgroundColor || "rgba(255, 255, 255, 0.05)",
                 backdropFilter: "blur(10px)",
                 border: "1px solid rgba(255, 255, 255, 0.1)",
                 borderRadius: 16,

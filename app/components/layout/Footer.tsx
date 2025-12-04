@@ -6,7 +6,6 @@ export default function Footer() {
     <footer className="text-white py-6 md:py-8" style={{ backgroundColor: '#333333' }}>
       <div className="max-w-none mx-auto px-4 sm:px-6 md:px-12 lg:px-24 xl:px-[152px]">
         <div className="flex flex-row items-center justify-between gap-4 md:gap-8">
-          {/* Logo and Information Section */}
           <div className="flex flex-col items-start md:items-end gap-1 md:gap-2">
             <div className="flex items-center gap-2 md:gap-3">
               <Image
@@ -24,7 +23,6 @@ export default function Footer() {
             </div>
           </div>
           
-          {/* Social Media Icons */}
           <div className="flex items-center justify-center gap-3 md:gap-6">
             <a
               href="https://instagram.com/gdgkocaeli"
@@ -70,6 +68,24 @@ export default function Footer() {
                 alt="Twitter"
                 width={24}
                 height={24}
+                className="md:w-9 md:h-9 flex-shrink-0"
+              />
+            </a>
+            
+            <a
+              href="https://github.com/gdg-kocaeli/devFest-25-kocaeli"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-80 transition-opacity duration-200"
+              aria-label="GitHub"
+            >
+              
+              <Image
+                src="/github.svg"
+                alt="GitHub"
+                width={24}
+                height={24}
+                style={{ filter: 'brightness(0) invert(1)' }}
                 className="md:w-9 md:h-9 flex-shrink-0"
               />
             </a>

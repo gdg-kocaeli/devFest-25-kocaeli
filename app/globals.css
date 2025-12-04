@@ -24,7 +24,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -42,7 +41,6 @@ body {
   background: #a8a8a8;
 }
 
-/* Custom large sizes for blur effects */
 .w-160 { width: 40rem; }
 .h-160 { height: 40rem; }
 .w-192 { width: 48rem; }
@@ -53,7 +51,6 @@ body {
 .-bottom-96 { bottom: -24rem; }
 .-left-64 { left: -16rem; }
 
-/* Mobile menu animations */
 @keyframes slideDown {
   from {
     opacity: 0;

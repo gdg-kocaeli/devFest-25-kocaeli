@@ -30,10 +30,10 @@ export default function ContactSection() {
     try {
       const GOOGLE_FORM_URL = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSd2lRZLzJ4_Rc38tF06bP6tu9DD8jE6mtxCmqx7ARYXPP0_SA/formResponse';
       const formParams = new URLSearchParams();
-      formParams.append('entry.73153043', formData.name);        // Name Last Name
-      formParams.append('entry.800932274', formData.email);      // Email
-      formParams.append('entry.1776974724', formData.subject);   // Subject
-      formParams.append('entry.1067904850', formData.message);   // Message
+      formParams.append('entry.73153043', formData.name);
+      formParams.append('entry.800932274', formData.email);
+      formParams.append('entry.1776974724', formData.subject);
+      formParams.append('entry.1067904850', formData.message);
 
       await fetch(GOOGLE_FORM_URL, {
         method: 'POST',

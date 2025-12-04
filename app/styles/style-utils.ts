@@ -1,4 +1,3 @@
-// Simple style helpers
 import { designTokens } from './design-tokens';
 
 export const componentStyles = {

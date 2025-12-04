@@ -8,7 +8,7 @@ export default function TeamSection() {
       title: "Organizer",
       linkedin: "https://www.linkedin.com/in/muhammed-halil-akkaynak/",
       twitter: "https://twitter.com/mhakkaynak",
-      image: "/organizer-mha.png"
+      image: "/organizer-mha.jpeg"
     },
     {
       name: "Ecem",
@@ -16,6 +16,13 @@ export default function TeamSection() {
       title: "Organizer",
       linkedin: "https://www.linkedin.com/in/ecem-yalcin/",
       image: "/organizer-ey.jpeg"
+    },
+    {
+      name: "Ahmet",
+      surname: "Serdar",
+      title: "Co-Organizer",
+      linkedin: "https://www.linkedin.com/in/ahmetserdartuncay/",
+      image: "/co-ahmetserdar.jpeg"
     },
   ];
 

@@ -74,9 +74,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${outfit.variable} antialiased relative min-h-screen bg-black`}
       >
-        {/* Corner Blur Effects */}
         <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
-          {/* Top Left Corner */}
           <div 
             className="absolute -top-96 -left-96 w-192 h-192 rounded-full"
             style={{
@@ -85,7 +83,6 @@ export default function RootLayout({
             }}
           />
           
-          {/* Top Right Corner */}
           <div 
             className="absolute -top-96 -right-96 w-192 h-192 rounded-full"
             style={{
@@ -94,7 +91,6 @@ export default function RootLayout({
             }}
           />
           
-          {/* Bottom Left Corner */}
           <div 
             className="absolute -bottom-96 -left-96 w-192 h-192 rounded-full"
             style={{
@@ -103,7 +99,6 @@ export default function RootLayout({
             }}
           />
           
-          {/* Bottom Right Corner */}
           <div 
             className="absolute -bottom-96 -right-96 w-192 h-192 rounded-full"
             style={{

@@ -5,7 +5,7 @@ import Image from 'next/image';
 import ScheduleCard from '../ui/ScheduleCard';
 
 type ScheduleItem = {
-  type: 'KEYNOTE' | 'PANEL' | 'WORKSHOP' | 'MOLA' | 'KAPANIŞ' ;
+  type: 'KEYNOTE' | 'Sunum' | 'WORKSHOP' | 'MOLA' | 'KAPANIŞ' ;
   time: string;
   title: string;
   speaker?: string;
@@ -25,21 +25,21 @@ export default function ScheduleSection() {
       speakerImage: '/ramesh-chander.jpeg',
     },
     {
-      type: 'PANEL',
+      type: 'Sunum',
       time: '11:30-12:00',
       title: 'Gemini 2.x for developers',
       speaker: 'Abdel Sghiouar',
       speakerImage: '/abdel-sghiouar.png',
     },
     {
-      type: 'PANEL',
+      type: 'Sunum',
       time: '12:15-12:45',
       title: 'Building Reliable, Scalable, and Insightful Data Platforms',
       speaker: 'Ersin Yetişen',
       speakerImage: '/ersin-yetisen.png',
     },
     {
-      type: 'PANEL',
+      type: 'Sunum',
       time: '13:00-13:30',
       title: 'Asynchronous Programming in Flutter: A Deep Dive',
       speaker: 'Levent Kantaroğlu - Bengisu Özkul',
@@ -51,28 +51,28 @@ export default function ScheduleSection() {
       title: 'Launch - Network',
     },
     {
-      type: 'PANEL',
+      type: 'Sunum',
       time: '14:15-14:45',
-      title: 'Intelligent Cloud Era: Managing GCP with Cloud Assist',
-      speaker: 'Alper Sarı',
-      speakerImage: '/alper-sari.jpeg',
-    },
-    {
-      type: 'PANEL',
-      time: '15:00-15:30',
       title: 'Flutter at Native Speed: The FFI and Platform Channels Way',
       speaker: 'Esra Kadah',
       speakerImage: '/esra-kadah.jpg',
     },
     {
-      type: 'PANEL',
+      type: 'Sunum',
+      time: '15:00-15:30',
+      title: 'Intelligent Cloud Era: Managing GCP with Cloud Assist',
+      speaker: 'Alper Sarı',
+      speakerImage: '/alper-sari.jpeg',
+    },
+    {
+      type: 'Sunum',
       time: '15:45-16:15',
       title: 'The Modern Android AI Stack: A Deep Dive into Android Studio and Gemini',
       speaker: 'Kaan Enes Kapıcı',
       speakerImage: '/kaan-enes-kapici.jpg',
     },
     {
-      type: 'PANEL',
+      type: 'Sunum',
       time: '16:20-16:50',
       title: 'The Dirty Side of DevSecOps  ',
       speaker: 'Mert Polat',
@@ -82,21 +82,21 @@ export default function ScheduleSection() {
 
   const salon2Schedule: ScheduleItem[] = [
     {
-      type: 'PANEL',
+      type: 'Sunum',
       time: '11:30-12:00',
       title: 'Resilient Microservices for the AI Era',
       speaker: 'Emin Çimen',
       speakerImage: '/emin-cimen.jpg',
     },
     {
-      type: 'PANEL',
+      type: 'Sunum',
       time: '12:15-12:45',
       title: 'DevOps for Frontend Developers',
       speaker: 'Ali Can Gündüz',
       speakerImage: '/ali-can-gunduz.jpg',
     },
     {
-      type: 'PANEL',
+      type: 'Sunum',
       time: '13:00-13:30',
       title: 'The Bridge Between Business and Technology',
       speaker: 'Esra Doğan',
@@ -108,21 +108,21 @@ export default function ScheduleSection() {
       title: 'Launch - Network',
     },
     {
-      type: 'PANEL',
+      type: 'Sunum',
       time: '14:15-14:45',
       title: 'Performance, Scalability, and Developer Experience: Go & Java',
       speaker: 'Melih Kuru',
       speakerImage: '/melih-kuru.png',
     },
     {
-      type: 'PANEL',
+      type: 'Sunum',
       time: '15:00-15:30',
       title: 'Build Angular Apps with ABP Framework',
       speaker: 'Fahri Gedik',
       speakerImage: '/fahri-gedik.jpg',
     },
     {
-      type: 'PANEL',
+      type: 'Sunum',
       time: '15:45-16:15',
       title: 'Building Smarter Mobile Apps with AI Agents',
       speaker: 'Abdulkerim Karaman',
@@ -140,7 +140,6 @@ export default function ScheduleSection() {
           🕘 Program Akışı
         </h2>
 
-        {/* Salon Butonları */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           <button
             onClick={() => setSelectedSalon('salon1')}
@@ -189,7 +188,6 @@ export default function ScheduleSection() {
           </button>
         </div>
 
-        {/* Program Kartları - Üstten padding ekledik */}
         <div className="flex flex-col gap-4 items-center overflow-x-hidden pt-3">
           {currentSchedule.map((item, index) => (
             <ScheduleCard

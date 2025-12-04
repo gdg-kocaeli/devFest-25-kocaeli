@@ -18,7 +18,6 @@ export default function HeroSection() {
 
   return (
     <section className="min-h-screen flex items-center justify-center pt-16 px-4 sm:px-6 lg:px-8 rounded-bl-[64px] rounded-br-[64px] sm:rounded-bl-[96px] sm:rounded-br-[96px] lg:rounded-bl-[128px] lg:rounded-br-[128px] relative overflow-hidden">
-      {/* Background with filter */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat rounded-bl-[64px] rounded-br-[64px] sm:rounded-bl-[96px] sm:rounded-br-[96px] lg:rounded-bl-[128px] lg:rounded-br-[128px]"
         style={{

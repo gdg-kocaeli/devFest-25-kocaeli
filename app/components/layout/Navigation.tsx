@@ -6,8 +6,8 @@ import { componentStyles } from '../../styles/style-utils';
 
 const navigationItems = [
   { id: 'sponsors', label: 'Sponsorlar' },
+  { id: 'schedule', label: 'Program' },
   { id: 'speakers', label: 'Konuşmacılar' },
-  // { id: 'schedule', label: 'Program' },
   { id: 'team', label: 'Ekip' },
   { id: 'iletisim', label: 'İletişim' }
 ];
@@ -84,7 +84,6 @@ export default function Navigation() {
             </div>
           </div>
 
-          {/* Mobile menu button */}
           <div className="md:hidden">
             <button
               onClick={toggleMobileMenu}
@@ -117,7 +116,6 @@ export default function Navigation() {
           </div>
         </div>
 
-        {/* Mobile menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden absolute top-14 sm:top-16 left-0 right-0 bg-[#333333] shadow-xl animate-slideDown z-50 mx-4 rounded-lg">
             <div className="px-4 py-4 space-y-2">

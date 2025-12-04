@@ -20,7 +20,7 @@ export default function SpeakersSection() {
     },
     {
       name : 'Ersin',
-      surname : 'Yetisen',
+      surname : 'Yetişen',
       title : 'Head Of Software Development',
       company : '@Kartaca',
       image : '/ersin-yetisen.png'
@@ -28,7 +28,7 @@ export default function SpeakersSection() {
 
     {
       name : 'Levent',
-      surname : ' Kantaroglu',
+      surname : ' Kantaroğlu',
       title : 'Mobile Team Lead',
       company : '@THY Teknoloji',
       image : '/levent-kantaroglu.png',
@@ -41,18 +41,18 @@ export default function SpeakersSection() {
       image : '/bengisu.jpg',
     },
     {
-      name : 'Alper',
-      surname : 'Sarı',
-      title : 'Cloud Native Engineer',
-      company : '@bestcloudfor.me',
-      image : '/alper-sari.jpeg',
-    },
-    {
       name : 'Esra',
       surname : 'Kadah',
       title : 'Senior App Developer',
       company : '@Antigua Mobile',
       image : '/esra-kadah.jpg',
+    },
+    {
+      name : 'Alper',
+      surname : 'Sarı',
+      title : 'Cloud Native Engineer',
+      company : '@bestcloudfor.me',
+      image : '/alper-sari.jpeg',
     },
     {
       name : 'Kaan Enes',

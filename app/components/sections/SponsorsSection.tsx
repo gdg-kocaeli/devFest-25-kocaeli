@@ -12,7 +12,7 @@ export default function SponsorsSection() {
   };
 
   const goldSponsors = [
-    { label: "Kartaca", src: "/kartaca.jpg", alt: "Gold Sponsor Kartaca", href: "https://kartaca.com/", customSize: 189 }
+    { label: "Kartaca", src: "/kartaca.png", alt: "Gold Sponsor Kartaca", href: "https://kartaca.com/", customSize: 189, backgroundColor: 'white' }
   ];
 
   const silverSponsors = [
@@ -25,7 +25,7 @@ export default function SponsorsSection() {
   ];
 
   const medyaSponsors = [
-    { label: "Çetkin Agency", src: "/cetkin-agency.png", alt: "Medya Sponsoru Çetkin Agency", href: "https://www.linkedin.com/company/cetkin-agency/" },
+    { label: "Çetkin Agency", src: "/cetkin-agency.png", alt: "Medya Sponsoru Çetkin Agency", href: "https://www.instagram.com/cetkin.agency/" },
   ];
 
   const etkinlikSponsors = [
@@ -50,19 +50,7 @@ export default function SponsorsSection() {
   return (
     <section id="sponsors" className="py-16">
       <div className="max-w-[1200px] mx-auto px-4">
-        {/* Sponsor Ol Butonu */}
-        <div className="max-w-md mx-auto mb-16">
-          <Button
-            className="!bg-[#25773b] !text-[#f5f6f6] !w-full !rounded-2xl gap-2 hover:!bg-[#1e5f2f]"
-            onClick={handleSponsorClick}
-          >
-            <Image src="/handshake.svg" alt="" width={24} height={24} />
-            Sponsor Olmak İster misiniz?
-          </Button>
-        </div>
-
-        {/* Ana Sponsor */}
-        <div className="mb-20">
+         <div className="mb-20">
           <h3 className="text-white text-4xl md:text-5xl font-semibold leading-none tracking-[-0.04em] text-center mb-12">
             💎 Ana Sponsor
           </h3>
@@ -81,7 +69,6 @@ export default function SponsorsSection() {
           </div>
         </div>
 
-        {/* Altın Sponsorlar */}
         <div className="mb-20">
           <h3 className="text-white text-3xl md:text-4xl font-semibold leading-none tracking-[-0.04em] text-center mb-12">
             🥇 Altın Sponsorlar
@@ -95,13 +82,13 @@ export default function SponsorsSection() {
                   alt={sponsor.alt}
                   size={isMobile ? 'small' : 'large'}
                   customSize={sponsor.customSize}
+                  backgroundColor={sponsor.backgroundColor}
                 />
               </Link>
             ))}
           </div>
         </div>
 
-        {/* Gümüş Sponsorlar */}
         <div className="mb-20">
           <h3 className="text-white text-3xl md:text-4xl font-semibold leading-none tracking-[-0.04em] text-center mb-12">
             🥈 Gümüş Sponsorlar
@@ -120,7 +107,6 @@ export default function SponsorsSection() {
           </div>
         </div>
 
-        {/* Bronz Sponsorlar */}
         <div className="mb-20">
           <h3 className="text-white text-3xl md:text-4xl font-semibold leading-none tracking-[-0.04em] text-center mb-12">
             🥉 Bronz Sponsorlar
@@ -139,7 +125,6 @@ export default function SponsorsSection() {
           </div>
         </div>
 
-        {/* Medya Sponsoru */}
         <div className="mb-20">
           <h3 className="text-white text-3xl md:text-4xl font-semibold leading-none tracking-[-0.04em] text-center mb-12">
             📰 Medya Sponsoru
@@ -158,10 +143,9 @@ export default function SponsorsSection() {
           </div>
         </div>
 
-        {/* Etkinlik Sponsorları */}
         <div>
           <h3 className="text-white text-3xl md:text-4xl font-semibold leading-none tracking-[-0.04em] text-center mb-12">
-            🎉 Etkinlik Sponsorları
+            🎉 Partnerlerimiz
           </h3>
           <div className="flex flex-wrap justify-center gap-4 md:gap-x-[38px] md:gap-y-8">
             {etkinlikSponsors.map((sponsor, index) => (
